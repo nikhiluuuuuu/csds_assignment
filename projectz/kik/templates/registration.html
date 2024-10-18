@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="{% url 'registered'%}">
+            {% csrf_token %}
+            <label for="user">User Name</label> <br>
+            <input type="text" name="user" placeholder="Enter username"> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" name="password" placeholder="enter password"> <br>
+            <label for="confirm_password" >Confirm Password</label><br>
+            <input type="password" name="confirm_password" placeholder="Confirmpassword"><br>
+                            <label class="label-heading" for="mail">EMail</label><br />
+                            <input class="input-stylling" type="email" name="mail" id="mail" placeholder="Enter EMail" /> <br />
+            <label for="fname">first name</label> <br>
+            <input type="text" name="fname" placeholder="enter first name"><br>
+            <label for="lname">last name</label>
+            <input type="text"  placeholder="enter last name" name="lname"><br>
+            <label for="age">age</label><br>
+            <input type="number" name="age" placeholder="enter age"><br>
+            <label for="mobile">mobile</label><br>
+            <input type="number" name="mobile" placeholder="enter mobile"> <br>
+            <div class="btn">
+                <button type="submit" name="save">register</button>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>
